@@ -9,8 +9,8 @@ public class Person implements RepkaItem {
         this.namePadezh = namePadezh;
     }
 
-    public String pull (Person person) {
-        return null;
+    public void pull (Person person) {
+        System.out.println(this.getName() + " за " + person.getNamePadezh());
     }
 
     public String getName() {
