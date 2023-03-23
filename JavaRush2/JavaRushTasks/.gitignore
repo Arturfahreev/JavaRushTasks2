@@ -7,12 +7,10 @@ target/
 .repository/
 *.iws
 *.class
-*.jar
 .settings/
 .project
 .classpath
 .springBeans
 /out/
-/JavaRushPlugin.properties
 /out.log
 /out.log.*
