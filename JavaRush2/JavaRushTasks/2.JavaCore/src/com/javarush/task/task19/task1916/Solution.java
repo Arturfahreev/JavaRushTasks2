@@ -26,7 +26,7 @@ public class Solution {
             while (reader2.ready()) {
                 list2.add(reader2.readLine());
             }
-            for (int i = 0; i < Math.min(list1.size(), list2.size()); ) {
+            for (int i = 0; i < Math.min(list1.size(), list2.size()); i++ ) {
                 String line1List1 = list1.get(i);
                 String line2List1 = list1.get(i + 1);
                 //String line3List1 = list1.get(i + 2);
@@ -47,19 +47,16 @@ public class Solution {
 //                                                   SAME строка5
 //                                                    REMOVED строка0
 
-
-
-
-
                 if (line1List1.equals(line1List2)) {
                     lines.add(new LineItem(Type.SAME, line1List1));
-                    i++;
-                    continue;
+
+
                 } else if (line2List1.equals(line1List2)) {
                     lines.add(new LineItem(Type.REMOVED, line1List1));
                     lines.add(new LineItem(Type.SAME, line2List1));
-                    i += 2;
-                    continue;
+                } else if (line1List1.equals(line2List2)) {
+                    lines.add(new LineItem(Type.ADDED, line1List2));
+                    lines.add(new LineItem(Type.SAME, line1List1));
                 }
             }
 
